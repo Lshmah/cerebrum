@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Roboto', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #E3E3E3;
+		}
+
+		.border {
+			border: 0px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #369f94;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border background">
+    <a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="personnel" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-user"></i> Personnel</a>
+		<a id="map" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-location-dot"></i> Map</a>
+		<a id="history" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-clock-rotate-left"></i> History</a>
+		<a id="power-index" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-flask"></i> Power Index</a>
+		<a id="positions" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Positions</a>
+		<a id="extra" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bars-progress"></i> Extra</a>
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/lshmah/caff918fabe14d5592b5b26878653ee0", '_blank').focus();
+			else if (id == "personnel")
+				window.open("https://www.notion.so/lshmah/Characters-c5acf06fa1c144db9f68debec0d0b5ed", '_blank').focus();
+			else if (id == "map")
+				window.open("https://www.notion.so/lshmah/Locations-cb349e1c05704592848bc12247ba5149", '_blank').focus();
+			else if (id == "history")
+				window.open("https://www.notion.so/lshmah/History-f91b21c5bdcf42659ab5ad6fc61592b9", '_blank').focus();
+			else if (id == "power-index")
+				window.open("https://www.notion.so/lshmah/Power-Index-00c58ca6abe048319b457b9a19354ee4", '_blank').focus();
+			else if (id == "positions")
+				window.open("https://www.notion.so/lshmah/Positions-7f0d524795d346ad8912347a29fd9c75", '_blank').focus();
+			else if (id == "extra")
+				window.open("https://www.notion.so/lshmah/Aesthetic-c814ae4dfb7c49e3b2e9ff7290da957d", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
